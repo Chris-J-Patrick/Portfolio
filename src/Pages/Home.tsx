@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           Welcome to <span className="text-pink-500">MyPortfolio</span>
         </h1>
         <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-gray-300">
-          Showcasing my projects and skills to potential employers.
+          Showcasing my projects and skills.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}
