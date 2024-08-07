@@ -5,15 +5,14 @@ export default {
     extend: {
       colors: {
         primary: "#1a73e8",
-        secondary: "#b000b5",
-        accent: "#ff4081",
-        "accent-dark": "#c60055",
-        background: "#f5f5f5",
-        text: "#333333",
+        secondary: "#4A5568",
+        accent: "#FF6600",
+        background: "#F7FAFC",
+        text: "#2D3748",
       },
       fontFamily: {
-        heading: ["Poppins", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["Roboto", "sans-serif"],
+        body: ["Open Sans", "sans-serif"],
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in-out",

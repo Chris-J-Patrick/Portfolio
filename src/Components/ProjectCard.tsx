@@ -1,50 +1,56 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface ProjectCardProps {
   title: string;
+  subtitle: string;
   description: string;
   imageUrl: string;
   demoLink: string;
-  liveLink: string;
-  details: string; // Additional details about the project
+  videoUrl: string;
+  details: string;
+  technologies: { name: string; icon: IconDefinition }[];
+  onClick: () => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
+  subtitle,
   description,
   imageUrl,
-  demoLink,
-  liveLink,
-  details,
+  technologies,
+  onClick,
 }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+      whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl cursor-pointer flex flex-col"
+      onClick={onClick}
     >
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-4">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-gray-700">{description}</p>
-        <p className="text-gray-600 mt-2">{details}</p>
-        <div className="mt-4 flex space-x-4">
-          <a
-            href={demoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-blue-600"
-          >
-            See Demo
-          </a>
-          <a
-            href={liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-green-600"
-          >
-            See Live Project
-          </a>
+      <img src={imageUrl} alt={title} className="w-full h-64 object-cover" />
+      <div className="p-6 flex flex-col justify-between">
+        <div>
+          <h3 className="text-2xl font-bold mb-2 text-gray-900">{title}</h3>
+          <h4 className="text-xl mb-2 text-indigo-700">{subtitle}</h4>
+          <p className="text-gray-700 mb-4">{description}</p>
+        </div>
+        <div>
+          <h4 className="text-lg font-bold mb-2">Technologies Used:</h4>
+          <div className="flex flex-wrap gap-4">
+            {technologies.map((tech) => (
+              <div key={tech.name} className="flex items-center space-x-2">
+                <FontAwesomeIcon
+                  icon={tech.icon}
+                  size="2x"
+                  className="text-indigo-600"
+                />
+                <span className="text-md text-gray-800">{tech.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>
