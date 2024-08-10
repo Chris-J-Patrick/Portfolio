@@ -9,7 +9,6 @@ interface ProjectCardProps {
   description: string;
   imageUrl: string;
   demoLink: string;
-  videoUrl: string;
   details: string;
   technologies: { name: string; icon: IconDefinition }[];
   onClick: () => void;
@@ -33,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <motion.img
         src={imageUrl}
         alt={title}
-        className="w-full h-64 object-cover rounded-t-xl"
+        className="w-full object-cover"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       />
