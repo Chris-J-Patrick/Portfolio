@@ -75,17 +75,16 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <div className="bg-gray-50 text-gray-800 min-h-screen">
-      <header className="container mx-auto py-12 px-6 md:px-12 lg:px-24 flex flex-col items-center text-center">
-        <h1 className="text-5xl font-bold mb-4">Chris Patrick</h1>
-        <p className="text-lg mb-4">Full-Stack Developer</p>
-        <p className="text-md max-w-2xl">
-          With so many design portfolios online, making one that stands out is
-          challenging. Here are some of my selected projects showcasing my
-          skills and experience.
+    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-900 text-white min-h-screen">
+      <header className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-4 text-blue-400">My Projects</h1>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          A selection of projects that showcase my skills in full-stack
+          development, utilizing the latest web technologies to create
+          functional and elegant applications.
         </p>
       </header>
-      <main className="container mx-auto py-12 px-6 md:px-12 lg:px-24">
+      <main>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard
@@ -103,14 +102,6 @@ const Projects: React.FC = () => {
           ))}
         </div>
       </main>
-      <footer className="bg-gray-800 text-white py-8 text-center">
-        <p>
-          Interested in working with me?{" "}
-          <a href="mailto:youremail@example.com" className="underline">
-            Get in touch!
-          </a>
-        </p>
-      </footer>
       <AnimatePresence>
         {selectedProject && selectedProjectDetails && (
           <motion.div
@@ -126,21 +117,21 @@ const Projects: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="relative bg-white rounded-lg shadow-lg overflow-hidden w-full h-full mx-auto flex flex-col lg:flex-row"
+              className="relative bg-gray-800 rounded-lg shadow-lg overflow-hidden w-full h-full mx-auto flex flex-col lg:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="w-full lg:w-1/3 p-8 flex flex-col justify-between h-full overflow-y-auto bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+              <div className="w-full lg:w-1/3 p-8 flex flex-col justify-between h-full overflow-y-auto bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900">
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="self-end bg-gray-800 text-white rounded-full p-2 mb-4"
+                  className="self-end bg-gray-700 text-white rounded-full p-2 mb-4"
                 >
                   Close
                 </button>
                 <div>
-                  <h2 className="text-3xl font-bold mb-2 text-indigo-900">
+                  <h2 className="text-3xl font-bold mb-2 text-blue-400">
                     {selectedProjectDetails.title}
                   </h2>
-                  <h3 className="text-xl mb-4 text-indigo-700">
+                  <h3 className="text-xl mb-4 text-blue-300">
                     {selectedProjectDetails.subtitle}
                   </h3>
                   <div className="mb-6">
@@ -157,11 +148,11 @@ const Projects: React.FC = () => {
                       Your browser does not support the video tag.
                     </video>
                   </div>
-                  <p className="text-md text-gray-600 mb-6">
+                  <p className="text-md text-gray-300 mb-6">
                     {selectedProjectDetails.details}
                   </p>
                   <div className="mt-4">
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-lg font-bold mb-2 text-blue-400">
                       Technologies Used:
                     </h3>
                     <div className="flex flex-wrap gap-4">
@@ -173,9 +164,9 @@ const Projects: React.FC = () => {
                           <FontAwesomeIcon
                             icon={tech.icon}
                             size="2x"
-                            className="text-indigo-600"
+                            className="text-blue-500"
                           />
-                          <span className="text-md text-gray-800">
+                          <span className="text-md text-gray-300">
                             {tech.name}
                           </span>
                         </div>

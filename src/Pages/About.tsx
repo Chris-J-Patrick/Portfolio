@@ -126,14 +126,14 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
   const props = useSpring({ width: `${level}%`, from: { width: "0%" } });
   return (
     <div className="mb-4">
-      <div className="flex justify-between mb-1 text-secondary">
+      <div className="flex justify-between mb-1 text-gray-200">
         <span>{name}</span>
         <span>{level}%</span>
       </div>
-      <div className="w-full bg-gray-300 rounded-full h-4">
+      <div className="w-full bg-gray-700 rounded-full h-4">
         <animated.div
           style={props}
-          className="bg-primary h-4 rounded-full"
+          className="bg-blue-400 h-4 rounded-full"
         ></animated.div>
       </div>
     </div>
@@ -142,8 +142,8 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="container mx-auto py-20 px-6 md:px-12 lg:px-24 bg-background text-text">
-      <h1 className="text-5xl font-heading mb-8 text-center text-primary">
+    <div className="container mx-auto py-12 px-6 md:px-8 lg:px-16 bg-gray-900 text-white">
+      <h1 className="text-4xl font-bold mb-8 text-center text-blue-400">
         About Me
       </h1>
       <div className="flex flex-col md:flex-row items-center md:items-start">
@@ -151,32 +151,32 @@ const About: React.FC = () => {
           <img
             src="https://via.placeholder.com/300"
             alt="Profile"
-            className="rounded-full shadow-lg"
+            className="rounded-full shadow-xl w-48 h-48 md:w-64 md:h-64 border-4 border-blue-500"
           />
         </div>
-        <div className="md:w-2/3 md:pl-12">
-          <p className="text-lg mb-6 font-body">
+        <div className="md:w-2/3 md:pl-8">
+          <p className="text-lg mb-6 leading-relaxed">
             I am a passionate developer with experience in creating web
             applications using modern technologies. My focus is on delivering
             high-quality code and exceptional user experiences.
           </p>
-          <h2 className="text-3xl font-heading mb-4 text-secondary">Skills</h2>
-          <div className="flex flex-wrap mb-6">
-            {skills.map((skill) => (
-              <div key={skill.name} className="w-1/2 md:w-1/4 text-center mb-4">
+          <h2 className="text-3xl font-semibold mb-4 text-blue-400">Skills</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mb-8">
+            {skills.slice(0, 8).map((skill) => (
+              <div key={skill.name} className="text-center">
                 <FontAwesomeIcon
                   icon={skill.icon}
-                  className="text-4xl text-primary mb-2"
+                  className="text-5xl text-blue-400 mb-4"
                 />
-                <p>{skill.name}</p>
-                <p className="text-sm text-gray-500">{skill.description}</p>
+                <p className="font-semibold">{skill.name}</p>
+                <p className="text-sm text-gray-400">{skill.description}</p>
               </div>
             ))}
           </div>
-          <h2 className="text-3xl font-heading mb-4 text-secondary">
+          <h2 className="text-3xl font-semibold mb-4 text-blue-400">
             Proficiency
           </h2>
-          {skills.map((skill) => (
+          {skills.slice(0, 8).map((skill) => (
             <SkillBar key={skill.name} name={skill.name} level={skill.level} />
           ))}
         </div>
