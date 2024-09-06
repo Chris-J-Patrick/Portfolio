@@ -41,7 +41,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Attention to Detail Auto",
-    subtitle: "Auto detailing site with custom scheduler.",
+    subtitle: "Auto detailing site",
     description:
       "This project includes a detailed scheduling system built with React and Node.js, allowing users to book auto detailing services online.",
     imageUrl: "/AtdPic.png",
