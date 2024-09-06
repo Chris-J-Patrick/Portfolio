@@ -45,10 +45,10 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Appointment Scheduler",
-    subtitle: "Scheduling platform for managing appointments.",
+    title: "SchedulEase",
+    subtitle: "SaaS Scheduling platform for businesses managing appointments.",
     description:
-      "This platform provides a seamless appointment scheduling experience, built using modern web technologies like React, Node.js, and MongoDB.",
+      "This platform provides a seamless appointment scheduling and managing experience, built using modern web technologies like React, Node.js, and MongoDB.",
     imageUrl: "/SchPic.jpg",
     demoLink: "https://www.google.com",
     details:
