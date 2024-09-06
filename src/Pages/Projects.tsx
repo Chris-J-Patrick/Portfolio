@@ -161,21 +161,21 @@ const Projects: React.FC = () => {
                           <img
                             src="/SchPic.jpg"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/homepage.png"
                             alt={`${selectedProject.title} Homepage`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/pricing.png"
                             alt={`${selectedProject.title} Availability Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
 
@@ -183,63 +183,63 @@ const Projects: React.FC = () => {
                           <img
                             src="/service.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/datetime.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/custinfo.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/payment.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/conf.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/profile.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/services.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/bookings.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/customers.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
 
@@ -247,7 +247,7 @@ const Projects: React.FC = () => {
                           <img
                             src="/stats.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
