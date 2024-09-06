@@ -155,29 +155,108 @@ const Projects: React.FC = () => {
                         navigation
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
                       >
                         <SwiperSlide>
                           <img
                             src="/SchPic.jpg"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full sm:w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/homepage.png"
                             alt={`${selectedProject.title} Homepage`}
-                            className="w-full sm:w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/pricing.png"
                             alt={`${selectedProject.title} Availability Page`}
-                            className="w-full sm:w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
-                        {/* Add more slides as needed */}
+
+                        <SwiperSlide>
+                          <img
+                            src="/service.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/datetime.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/custinfo.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/payment.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/conf.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/profile.png"
+                            alt={`${selectedProject.title} Bookings`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/services.png"
+                            alt={`${selectedProject.title} Bookings`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/bookings.png"
+                            alt={`${selectedProject.title} Bookings`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/customers.png"
+                            alt={`${selectedProject.title} Bookings`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                          <img
+                            src="/stats.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <img
+                            src="/analytics.png"
+                            alt={`${selectedProject.title} Service Page`}
+                            className="w-2/3 mx-auto rounded-lg shadow-lg border border-gray-700"
+                          />
+                        </SwiperSlide>
                       </Swiper>
 
                       <p className="text-xl sm:text-2xl font-semibold text-teal-400 mb-4 sm:mb-6">
