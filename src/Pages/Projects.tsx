@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectCard from "../Components/ProjectCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
   faNodeJs,
