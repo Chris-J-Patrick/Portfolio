@@ -148,7 +148,7 @@ const Projects: React.FC = () => {
                       frameBorder="0"
                     ></iframe>
                   ) : (
-                    <div className="text-center max-w-full bg-gray-800 p-1 rounded-lg shadow-lg">
+                    <div className="text-center h-fit max-w-full bg-gray-800 p-1 rounded-lg shadow-lg">
                       <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         slidesPerView={1}
@@ -161,21 +161,21 @@ const Projects: React.FC = () => {
                           <img
                             src="/SchPic.jpg"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/homepage.png"
                             alt={`${selectedProject.title} Homepage`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/pricing.png"
                             alt={`${selectedProject.title} Availability Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
 
@@ -183,35 +183,35 @@ const Projects: React.FC = () => {
                           <img
                             src="/service.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/datetime.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/custinfo.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/payment.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/conf.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
