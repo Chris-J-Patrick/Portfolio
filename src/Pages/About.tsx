@@ -142,7 +142,7 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="container mx-auto py-12 px-6 md:px-8 lg:px-16 bg-gray-900 text-white">
+    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
       <h1 className="text-4xl font-bold mb-8 text-center text-blue-400">
         About Me
       </h1>

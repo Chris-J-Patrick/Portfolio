@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-800 text-white min-h-screen">
+    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
       <header className="text-center mb-12">
         <h1 className="text-4xl font-extrabold mb-4 text-teal-400">
           My Projects
