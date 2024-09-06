@@ -48,6 +48,10 @@ const Home: React.FC = () => {
         >
           I'm a full-stack developer specializing in creating exceptional
           digital experiences.
+          <span className="text-lg">
+            <br />
+            (Site is under development, and I appreciate you stopping by!)
+          </span>
         </motion.p>
 
         <motion.div

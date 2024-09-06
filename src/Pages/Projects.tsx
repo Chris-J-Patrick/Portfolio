@@ -118,7 +118,7 @@ const Projects: React.FC = () => {
               className="relative bg-gray-700 rounded-lg shadow-lg overflow-hidden w-full h-full mx-auto flex flex-col lg:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="w-full lg:w-1/3 p-8 flex flex-col justify-between h-full overflow-y-auto bg-gray-800">
+              <div className="w-full lg:w-1/4 p-8 flex flex-col justify-between h-full overflow-y-auto bg-gray-800">
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="self-end bg-gray-600 text-white rounded-full p-2 mb-4 hover:bg-gray-500 transition duration-200"
@@ -159,7 +159,7 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-2/3 h-full">
+              <div className="w-full lg:w-3/4 h-full">
                 <iframe
                   src={selectedProject}
                   title="Live Demo"
