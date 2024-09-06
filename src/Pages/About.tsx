@@ -142,16 +142,16 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
+    <div className="py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
       <h1 className="text-4xl font-bold mb-8 text-center text-blue-400">
         About Me
       </h1>
       <div className="flex flex-col md:flex-row items-center md:items-start">
         <div className="md:w-1/3 mb-8 md:mb-0 text-center">
           <img
-            src="https://via.placeholder.com/300"
+            src="/Headshot.jpg"
             alt="Profile"
-            className="rounded-full shadow-xl w-48 h-48 md:w-64 md:h-64 border-4 border-blue-500"
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mb-4 border-4 border-white shadow-md object-cover"
           />
         </div>
         <div className="md:w-2/3 md:pl-8">

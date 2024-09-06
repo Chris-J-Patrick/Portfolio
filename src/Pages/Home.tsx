@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // Assuming you're using react-router for navigation
-
+import { Link } from "react-router-dom";
 const Home: React.FC = () => {
   const staggerContainer = {
     hidden: { opacity: 0 },

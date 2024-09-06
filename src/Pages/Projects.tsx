@@ -49,7 +49,7 @@ const projects: Project[] = [
     subtitle: "Scheduling platform for managing appointments.",
     description:
       "This platform provides a seamless appointment scheduling experience, built using modern web technologies like React, Node.js, and MongoDB.",
-    imageUrl: "/SchPic.png",
+    imageUrl: "/SchPic.jpg",
     demoLink: "https://www.google.com",
     details:
       "This platform provides a seamless appointment scheduling experience, built using modern web technologies like React, Node.js, and MongoDB.",
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
+    <div className="py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
       <header className="text-center mb-12">
         <h1 className="text-4xl font-extrabold mb-4 text-teal-400">
           My Projects
