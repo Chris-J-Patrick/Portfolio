@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,6 +74,16 @@ const Header: React.FC = () => {
               </Link>
             </motion.div>
           ))}
+          <div className="flex space-x-6">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+            >
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </a>
+          </div>
         </div>
         <div className="md:hidden">
           <motion.button
@@ -113,6 +125,16 @@ const Header: React.FC = () => {
                   {link.name}
                 </Link>
               ))}
+              <div className="flex space-x-6">
+                <a
+                  href="https://github.com/Chris-J-Patrick"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+              </div>
             </nav>
           </motion.div>
         )}

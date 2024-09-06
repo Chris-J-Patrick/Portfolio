@@ -13,32 +13,6 @@ const Footer: React.FC = () => {
         <p className="text-center md:text-left mb-4 md:mb-0">
           &copy; 2024 MyPortfolio. All rights reserved.
         </p>
-        <div className="flex space-x-6">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            <FontAwesomeIcon icon={faTwitter} size="lg" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            <FontAwesomeIcon icon={faGithub} size="lg" />
-          </a>
-        </div>
       </div>
     </footer>
   );

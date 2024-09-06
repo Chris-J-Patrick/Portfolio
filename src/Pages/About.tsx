@@ -6,11 +6,22 @@ import {
   faCss3Alt,
   faHtml5,
   faJsSquare,
+  faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faCode, faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDatabase,
+  faCode,
+  faMicroscope,
+} from "@fortawesome/free-solid-svg-icons";
 import { useSpring, animated } from "@react-spring/web";
 
 const skills = [
+  {
+    name: "RESTful APIs",
+    icon: faCode,
+    level: 90,
+    description: "Proficient in designing and consuming RESTful APIs.",
+  },
   {
     name: "React",
     icon: faReact,
@@ -27,7 +38,7 @@ const skills = [
   },
   {
     name: "Express",
-    icon: faNodeJs,
+    icon: faCode,
     level: 85,
     description: "Building server-side applications with Express.",
   },
@@ -38,29 +49,42 @@ const skills = [
     description: "Skilled in building server-side applications with Node.js.",
   },
   {
+    name: "MongoDB/Mongoose",
+    icon: faDatabase,
+    level: 90,
+    description:
+      "Experienced in working with MongoDB and Mongoose for database management.",
+  },
+  {
+    name: "PostgreSQL",
+    icon: faDatabase,
+    level: 70,
+    description: "Honing PostgreSQL skill",
+  },
+  {
+    name: "Version Control (Git)",
+    icon: faGitAlt,
+    level: 90,
+    description: "Managing code with Git.",
+  },
+  {
+    name: "Postman",
+    icon: faMicroscope,
+    level: 95,
+    description: "Proficient in API testing with Postman",
+  },
+  {
     name: "JavaScript",
     icon: faJsSquare,
     level: 90,
     description:
       "Highly proficient in JavaScript for front-end and back-end development.",
   },
-  {
-    name: "MongoDB/Mongoose",
-    icon: faDatabase,
-    level: 85,
-    description:
-      "Experienced in working with MongoDB and Mongoose for database management.",
-  },
-  {
-    name: "RESTful APIs",
-    icon: faCode,
-    level: 80,
-    description: "Proficient in designing and consuming RESTful APIs.",
-  },
+
   {
     name: "CSS3",
     icon: faCss3Alt,
-    level: 90,
+    level: 95,
     description: "Proficient in creating responsive designs with CSS3.",
   },
   {
@@ -69,36 +93,23 @@ const skills = [
     level: 95,
     description: "Expert in structuring web content with HTML5.",
   },
-
-  {
-    name: "React Bootstrap",
-    icon: faCheck,
-    level: 80,
-    description: "Using Bootstrap components in React.",
-  },
   {
     name: "Vite",
-    icon: faCheck,
-    level: 70,
+    icon: faCode,
+    level: 95,
     description: "Building projects with Vite.",
   },
   {
     name: "Tailwind CSS",
     icon: faCss3Alt,
-    level: 85,
+    level: 90,
     description: "Using Tailwind CSS for styling.",
   },
   {
     name: "Auth0",
-    icon: faCheck,
-    level: 75,
+    icon: faCode,
+    level: 85,
     description: "Implementing user authentication with Auth0.",
-  },
-  {
-    name: "Version Control (Git)",
-    icon: faCheck,
-    level: 90,
-    description: "Managing code with Git.",
   },
 ];
 
@@ -125,43 +136,52 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
-      <h1 className="text-4xl font-bold mb-8 text-center text-blue-400">
+    <div className="py-12 px-6 md:px-12 lg:px-24 bg-gray-700 text-white min-h-screen text-center">
+      <h1 className="text-5xl font-extrabold mb-10 text-center text-blue-500">
         About Me
       </h1>
       <div className="flex flex-col md:flex-row items-center md:items-start">
-        <div className="md:w-1/3 mb-8 md:mb-0 text-center">
+        <div className="mb-8 md:mb-0 text-center">
           <img
             src="/Headshot.jpg"
             alt="Profile"
-            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full mb-4 border-4 border-white shadow-md object-cover"
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-full mb-6 border-4 border-blue-500 shadow-lg object-cover"
           />
         </div>
         <div className="md:w-2/3 md:pl-8">
-          <p className="text-lg mb-6 leading-relaxed">
-            I am a passionate developer with experience in creating web
-            applications using modern technologies. My focus is on delivering
-            high-quality code and exceptional user experiences.
+          <p className="text-lg mb-8 leading-relaxed text-gray-300">
+            I'm currently working in sales, but my real passion is programming
+            and problem-solving. I absolutely love diving into code and finding
+            creative solutions to challenges. It's what really gets me excited
+            every day.
           </p>
-          <h2 className="text-3xl font-semibold mb-4 text-blue-400">Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mb-8">
-            {skills.slice(0, 8).map((skill) => (
+          <h2 className="text-4xl font-semibold mb-6 text-blue-400">Skills</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
+            {skills.map((skill) => (
               <div key={skill.name} className="text-center">
                 <FontAwesomeIcon
                   icon={skill.icon}
-                  className="text-5xl text-blue-400 mb-4"
+                  className="text-6xl text-blue-400 mb-6"
                 />
-                <p className="font-semibold">{skill.name}</p>
-                <p className="text-sm text-gray-400">{skill.description}</p>
+                <p className="font-bold text-xl text-white">{skill.name}</p>
+                <p className="text-sm text-gray-400 mt-1">
+                  {skill.description}
+                </p>
               </div>
             ))}
           </div>
-          <h2 className="text-3xl font-semibold mb-4 text-blue-400">
+          <h2 className="text-4xl font-semibold mb-6 text-blue-400">
             Proficiency
           </h2>
-          {skills.slice(0, 8).map((skill) => (
-            <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-          ))}
+          <div className="space-y-4">
+            {skills.map((skill) => (
+              <SkillBar
+                key={skill.name}
+                name={skill.name}
+                level={skill.level}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
