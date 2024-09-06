@@ -26,28 +26,16 @@ const skills = [
       "Proficient in TypeScript for type-safe JavaScript development.",
   },
   {
+    name: "Express",
+    icon: faNodeJs,
+    level: 85,
+    description: "Building server-side applications with Express.",
+  },
+  {
     name: "Node.js",
     icon: faNodeJs,
     level: 85,
     description: "Skilled in building server-side applications with Node.js.",
-  },
-  {
-    name: "GraphQL",
-    icon: faCode,
-    level: 75,
-    description: "Familiar with building APIs using GraphQL.",
-  },
-  {
-    name: "CSS3",
-    icon: faCss3Alt,
-    level: 90,
-    description: "Proficient in creating responsive designs with CSS3.",
-  },
-  {
-    name: "HTML5",
-    icon: faHtml5,
-    level: 95,
-    description: "Expert in structuring web content with HTML5.",
   },
   {
     name: "JavaScript",
@@ -70,16 +58,23 @@ const skills = [
     description: "Proficient in designing and consuming RESTful APIs.",
   },
   {
+    name: "CSS3",
+    icon: faCss3Alt,
+    level: 90,
+    description: "Proficient in creating responsive designs with CSS3.",
+  },
+  {
+    name: "HTML5",
+    icon: faHtml5,
+    level: 95,
+    description: "Expert in structuring web content with HTML5.",
+  },
+
+  {
     name: "React Bootstrap",
     icon: faCheck,
     level: 80,
     description: "Using Bootstrap components in React.",
-  },
-  {
-    name: "FontAwesome",
-    icon: faCheck,
-    level: 75,
-    description: "Using FontAwesome icons in projects.",
   },
   {
     name: "Vite",
@@ -92,18 +87,6 @@ const skills = [
     icon: faCss3Alt,
     level: 85,
     description: "Using Tailwind CSS for styling.",
-  },
-  {
-    name: "Express",
-    icon: faNodeJs,
-    level: 85,
-    description: "Building server-side applications with Express.",
-  },
-  {
-    name: "Acuity Scheduling",
-    icon: faCheck,
-    level: 70,
-    description: "Integrating Acuity Scheduling for appointments.",
   },
   {
     name: "Auth0",

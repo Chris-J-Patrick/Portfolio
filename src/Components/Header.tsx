@@ -45,7 +45,7 @@ const Header: React.FC = () => {
             to="/"
             className="hover:text-teal-300 transition-colors duration-300"
           >
-            MyPortfolio
+            Chris's Portfolio
           </Link>
         </motion.div>
         <div className="hidden md:flex space-x-6">

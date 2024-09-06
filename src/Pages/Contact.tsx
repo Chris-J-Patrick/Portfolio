@@ -1,6 +1,6 @@
 const Contact: React.FC = () => {
   return (
-    <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
+    <div className="py-12 px-6 md:px-12 lg:px-24 bg-gray-600 text-white min-h-screen text-center">
       <h2 className="text-4xl font-extrabold text-blue-400 mb-6">Contact</h2>
       <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
         I'd love to hear from you! Whether you have a question or just want to
