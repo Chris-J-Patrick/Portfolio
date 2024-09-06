@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black bg-opacity-80 z-50 overflow-y-auto"
+            className="fixed inset-0 bg-black bg-opacity-80 z-50 overflow-y-scroll"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
@@ -129,10 +129,10 @@ const Projects: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="relative bg-gray-700 rounded-lg shadow-lg overflow-y-auto py-6 w-full max-w-full h-full mx-auto my-0 p-2"
+              className="relative bg-gray-700 rounded-lg shadow-lg overflow-y-scroll py-0 w-full max-w-full  mx-auto my-0 p-2"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="w-full h-full flex flex-col lg:flex-row">
+              <div className="w-full flex flex-col lg:flex-row">
                 <div className="lg:w-full ">
                   <button
                     onClick={() => setSelectedProject(null)}
@@ -161,21 +161,21 @@ const Projects: React.FC = () => {
                           <img
                             src="/SchPic.jpg"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 h-auto mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/homepage.png"
                             alt={`${selectedProject.title} Homepage`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/pricing.png"
                             alt={`${selectedProject.title} Availability Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
 
@@ -183,63 +183,63 @@ const Projects: React.FC = () => {
                           <img
                             src="/service.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/datetime.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/custinfo.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/payment.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/conf.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-screen mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/profile.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/services.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/bookings.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/customers.png"
                             alt={`${selectedProject.title} Bookings`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
 
@@ -247,14 +247,14 @@ const Projects: React.FC = () => {
                           <img
                             src="/stats.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="max-w-5xl mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                         <SwiperSlide>
                           <img
                             src="/analytics.png"
                             alt={`${selectedProject.title} Service Page`}
-                            className="w-full mx-auto rounded-lg shadow-lg border border-gray-700"
+                            className="w-3/4 mx-auto rounded-lg shadow-lg border border-gray-700"
                           />
                         </SwiperSlide>
                       </Swiper>
