@@ -112,12 +112,14 @@ const skills = [
     description: "Implementing user authentication with Auth0.",
   },
 ];
-
 const SkillBar: React.FC<{ name: string; level: number }> = ({
   name,
   level,
 }) => {
   const props = useSpring({ width: `${level}%`, from: { width: "0%" } });
+  const skillColor =
+    "bg-gradient-to-r from-green-600 via-green-400 to-green-200";
+
   return (
     <div className="mb-4">
       <div className="flex justify-between mb-1 text-gray-200">
@@ -127,7 +129,7 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
       <div className="w-full bg-gray-700 rounded-full h-4">
         <animated.div
           style={props}
-          className="bg-blue-400 h-4 rounded-full"
+          className={`${skillColor} h-4 rounded-full`}
         ></animated.div>
       </div>
     </div>
@@ -136,16 +138,14 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="py-12 px-6 md:px-12 lg:px-24 bg-gray-700 text-white min-h-screen text-center">
-      <h1 className="text-5xl font-extrabold mb-10 text-center text-blue-500">
-        About Me
-      </h1>
+    <div className="py-12  bg-gray-700 text-white min-h-screen text-center">
+      <h1 className="text-5xl font-extrabold mb-4 text-blue-500">About Me</h1>
       <div className="flex flex-col md:flex-row items-center md:items-start">
-        <div className="mb-8 md:mb-0 text-center">
+        <div className="mb-8 md:mb-0 px-10 text-center">
           <img
             src="/Headshot.jpg"
             alt="Profile"
-            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-60 lg:h-60 rounded-full mb-6 border-4 border-blue-500 shadow-lg object-cover"
+            className="w-32 h-32 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-60 lg:h-72 rounded-full mb-6 border-4 border-blue-500 shadow-lg object-cover"
           />
         </div>
         <div className="md:w-2/3 md:pl-8">
@@ -156,12 +156,15 @@ const About: React.FC = () => {
             every day.
           </p>
           <h2 className="text-4xl font-semibold mb-6 text-blue-400">Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-6 mb-10">
             {skills.map((skill) => (
-              <div key={skill.name} className="text-center">
+              <div
+                key={skill.name}
+                className="text-center bg-gray-800 p-6 rounded-lg"
+              >
                 <FontAwesomeIcon
                   icon={skill.icon}
-                  className="text-6xl text-blue-400 mb-6"
+                  className="text-5xl text-blue-400 mb-6"
                 />
                 <p className="font-bold text-xl text-white">{skill.name}</p>
                 <p className="text-sm text-gray-400 mt-1">
@@ -170,19 +173,17 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
-          <h2 className="text-4xl font-semibold mb-6 text-blue-400">
-            Proficiency
-          </h2>
-          <div className="space-y-4">
-            {skills.map((skill) => (
-              <SkillBar
-                key={skill.name}
-                name={skill.name}
-                level={skill.level}
-              />
-            ))}
-          </div>
         </div>
+      </div>
+      <div className="space-y-4 container mx-auto bg-gray-800 p-10 rounded-md">
+        <h2 className="text-4xl font-semibold mb-6 text-blue-400">
+          Proficiency
+        </h2>
+        {skills.map((skill) => (
+          <div className="z-20">
+            <SkillBar key={skill.name} name={skill.name} level={skill.level} />
+          </div>
+        ))}
       </div>
     </div>
   );
