@@ -55,7 +55,6 @@ const Header: React.FC = () => {
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
             { name: "Projects", path: "/projects" },
-            { name: "Contact", path: "/contact" },
           ].map((link, index) => (
             <motion.div
               key={link.name}
@@ -114,7 +113,6 @@ const Header: React.FC = () => {
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
                 { name: "Projects", path: "/projects" },
-                { name: "Contact", path: "/contact" },
               ].map((link) => (
                 <Link
                   key={link.name}
