@@ -124,13 +124,13 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
   return (
     <div className="mb-6">
       <div className="flex justify-between mb-1 text-gray-200">
-        <span className="text-lg">{name}</span>
-        <span>{level}%</span>
+        <span className="text-sm md:text-lg">{name}</span>
+        <span className="text-sm">{level}%</span>
       </div>
-      <div className="w-full bg-gray-700 rounded-full h-4">
+      <div className="w-full bg-gray-700 rounded-full h-3 md:h-4">
         <animated.div
           style={props}
-          className={`${skillColor} h-4 rounded-full`}
+          className={`${skillColor} h-3 md:h-4 rounded-full`}
         ></animated.div>
       </div>
     </div>
@@ -139,27 +139,27 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="py-12 bg-gray-700 text-white min-h-screen">
-      <div className="container mx-auto flex mb-0 flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+    <div className="py-6 md:py-12 bg-gray-700 text-white min-h-screen flex flex-col justify-center items-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
         <div className="flex-shrink-0">
           <img
             src="/Headshot.jpg"
             alt="Profile"
-            className="w-32 h-44 rounded-full border-4 border-blue-500 shadow-lg object-cover"
+            className="w-24 h-32 md:w-32 md:h-44 rounded-full border-4 border-blue-500 shadow-lg object-cover"
           />
         </div>
 
-        <div className="flex-grow text-center md:text-left">
-          <h1 className="text-5xl font-extrabold mb-3 text-blue-500">
+        <div className="flex-grow text-center mx-3 md:mx-0 md:text-left">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-blue-500">
             About Me
           </h1>
-          <p className="text-lg leading-relaxed text-gray-200">
+          <p className="text-md md:text-lg leading-relaxed text-gray-200">
             I'm currently working in sales, but my real passion is programming
             and problem-solving. I love diving into code and finding creative
             solutions to challenges. It's what gets me excited every day.
           </p>
           <br />
-          <p className="text-lg leading-relaxed text-gray-200">
+          <p className="text-md md:text-lg leading-relaxed text-gray-200">
             I've developed strong skills in full-stack development, using
             technologies like{" "}
             <span className="text-blue-400">React, Node.js, and MongoDB.</span>{" "}
@@ -170,30 +170,32 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      <div className=" max-w-4xl mx-auto">
-        <h2 className="text-5xl font-semibold mb-6 text-blue-400 text-left mt-10">
+      <div className="max-w-full mx-10 lg:mx-0 md:max-w-4xl">
+        <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-blue-400 text-left mt-8 md:mt-10">
           Skills
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="bg-gray-800 p-6 rounded-lg text-center"
+              className="bg-gray-800 p-4 md:p-6 rounded-lg text-center"
             >
               <FontAwesomeIcon
                 icon={skill.icon}
-                className="text-4xl text-blue-400 mb-4"
+                className="text-3xl md:text-4xl text-blue-400 mb-2 md:mb-4"
               />
-              <p className="font-bold text-xl text-white">{skill.name}</p>
-              <p className="text-sm text-gray-200 mt-2">{skill.description}</p>
+              <p className="font-bold text-lg text-white">{skill.name}</p>
+              <p className="text-xs md:text-sm text-gray-200 mt-2">
+                {skill.description}
+              </p>
             </div>
           ))}
         </div>
 
-        <h2 className="text-5xl font-semibold mt-10 mb-4 text-blue-400 text-left">
+        <h2 className="text-3xl md:text-5xl font-semibold mt-8 md:mt-10 mb-4 text-blue-400 text-left">
           Proficiency
         </h2>
-        <div className="space-y-4 max-w-full mx-auto bg-gray-800 p-8 rounded-md">
+        <div className="space-y-4 max-w-full mx-auto bg-gray-800 p-4 md:p-8 rounded-md">
           {skills.map((skill) => (
             <SkillBar key={skill.name} name={skill.name} level={skill.level} />
           ))}
