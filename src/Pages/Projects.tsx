@@ -43,11 +43,11 @@ const projects: Project[] = [
     title: "Attention to Detail Auto",
     subtitle: "Auto detailing site",
     description:
-      "This project includes a detailed scheduling system built with React and Node.js, allowing users to book auto detailing services online.",
+      "This project is fully responsive, custom-designed and built with React, offering users a seamless way to book auto detailing services online.",
     imageUrl: "/AtdPic.png",
     demoLink: "https://detailing-website-react.vercel.app/",
     details:
-      "This project includes a detailed scheduling system built with React and Node.js, allowing users to book auto detailing services online.",
+      "This project is fully responsive, custom-designed and built with React, offering users a seamless way to book auto detailing services online.",
     technologies: [
       { name: "React", icon: faReact },
       { name: "Node.js", icon: faNodeJs },

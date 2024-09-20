@@ -112,6 +112,7 @@ const skills = [
     description: "Implementing user authentication with Auth0.",
   },
 ];
+
 const SkillBar: React.FC<{ name: string; level: number }> = ({
   name,
   level,
@@ -121,9 +122,9 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
     "bg-gradient-to-r from-green-600 via-green-400 to-green-200";
 
   return (
-    <div className="mb-4">
+    <div className="mb-6">
       <div className="flex justify-between mb-1 text-gray-200">
-        <span>{name}</span>
+        <span className="text-lg">{name}</span>
         <span>{level}%</span>
       </div>
       <div className="w-full bg-gray-700 rounded-full h-4">
@@ -138,52 +139,65 @@ const SkillBar: React.FC<{ name: string; level: number }> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="py-12  bg-gray-700 text-white min-h-screen text-center">
-      <h1 className="text-5xl font-extrabold mb-4 text-blue-500">About Me</h1>
-      <div className="flex flex-col md:flex-row items-center md:items-start">
-        <div className="mb-8 md:mb-0 px-10 text-center">
+    <div className="py-12 bg-gray-700 text-white min-h-screen">
+      <div className="container mx-auto flex mb-0 flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+        <div className="flex-shrink-0">
           <img
             src="/Headshot.jpg"
             alt="Profile"
-            className="w-32 h-32 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-60 lg:h-72 rounded-full mb-6 border-4 border-blue-500 shadow-lg object-cover"
+            className="w-32 h-44 rounded-full border-4 border-blue-500 shadow-lg object-cover"
           />
         </div>
-        <div className="md:w-2/3 md:pl-8">
-          <p className="text-lg mb-8 leading-relaxed text-gray-300">
+
+        <div className="flex-grow text-center md:text-left">
+          <h1 className="text-5xl font-extrabold mb-3 text-blue-500">
+            About Me
+          </h1>
+          <p className="text-lg leading-relaxed text-gray-200">
             I'm currently working in sales, but my real passion is programming
-            and problem-solving. I absolutely love diving into code and finding
-            creative solutions to challenges. It's what really gets me excited
-            every day.
+            and problem-solving. I love diving into code and finding creative
+            solutions to challenges. It's what gets me excited every day.
           </p>
-          <h2 className="text-4xl font-semibold mb-6 text-blue-400">Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-6 mb-10">
-            {skills.map((skill) => (
-              <div
-                key={skill.name}
-                className="text-center bg-gray-800 p-6 rounded-lg"
-              >
-                <FontAwesomeIcon
-                  icon={skill.icon}
-                  className="text-5xl text-blue-400 mb-6"
-                />
-                <p className="font-bold text-xl text-white">{skill.name}</p>
-                <p className="text-sm text-gray-400 mt-1">
-                  {skill.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <br />
+          <p className="text-lg leading-relaxed text-gray-200">
+            I've developed strong skills in full-stack development, using
+            technologies like{" "}
+            <span className="text-blue-400">React, Node.js, and MongoDB.</span>{" "}
+            I enjoy creating efficient applications that solve problems and
+            deliver great user experiences. Coding is my craft, and I'm always
+            eager to learn and push my limits with every new project.
+          </p>
         </div>
       </div>
-      <div className="space-y-4 container mx-auto bg-gray-800 p-10 rounded-md">
-        <h2 className="text-4xl font-semibold mb-6 text-blue-400">
+
+      <div className=" max-w-4xl mx-auto">
+        <h2 className="text-5xl font-semibold mb-6 text-blue-400 text-left mt-10">
+          Skills
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {skills.map((skill) => (
+            <div
+              key={skill.name}
+              className="bg-gray-800 p-6 rounded-lg text-center"
+            >
+              <FontAwesomeIcon
+                icon={skill.icon}
+                className="text-4xl text-blue-400 mb-4"
+              />
+              <p className="font-bold text-xl text-white">{skill.name}</p>
+              <p className="text-sm text-gray-200 mt-2">{skill.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-5xl font-semibold mt-10 mb-4 text-blue-400 text-left">
           Proficiency
         </h2>
-        {skills.map((skill) => (
-          <div className="z-20">
+        <div className="space-y-4 max-w-full mx-auto bg-gray-800 p-8 rounded-md">
+          {skills.map((skill) => (
             <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
