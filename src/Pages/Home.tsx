@@ -19,7 +19,7 @@ const fadeInUp = {
 
 const Home: React.FC = () => {
   return (
-    <main className="relative h-[84vh] w-full bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center overflow-hidden">
+    <main className="relative h-[90vh] w-full bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
       <motion.div
         className="relative z-10 px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center"
