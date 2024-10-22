@@ -5,6 +5,7 @@ import {
   faReact,
   faNodeJs,
   faCss3Alt,
+  faStripe,
 } from "@fortawesome/free-brands-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faDatabase, faKey, faServer } from "@fortawesome/free-solid-svg-icons";
@@ -63,7 +64,7 @@ const projects: Project[] = [
     description:
       "This platform provides a seamless appointment scheduling and managing experience, built using modern web technologies like React, Node.js, and MongoDB.",
     imageUrl: "/SchPic.jpg",
-    demoLink: "",
+    demoLink: "https://service-scheduler.vercel.app",
     details:
       "This platform provides a seamless appointment scheduling experience, built using modern web technologies like React, Node.js, and MongoDB.",
     technologies: [
@@ -73,6 +74,7 @@ const projects: Project[] = [
       { name: "Auth0", icon: faKey },
       { name: "RESTful APIs", icon: faServer },
       { name: "CSS3", icon: faCss3Alt },
+      { name: "Stripe", icon: faStripe },
     ],
   },
 ];
