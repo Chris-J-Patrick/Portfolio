@@ -47,7 +47,7 @@ const Home: React.FC = () => {
           className="text-lg md:text-2xl mb-10 mx-auto text-gray-300"
           variants={fadeInUp}
         >
-          I'm a full-stack developer!
+          I'm a full-stack developer
         </motion.p>
 
         <motion.div className="flex space-x-6" variants={fadeInUp}>
